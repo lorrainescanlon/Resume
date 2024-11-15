@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Colors */
+/*--------------------------------------------Colors*/
 
 .bg-color-name-title {
     background-color: #676767;
@@ -11,33 +11,38 @@
     background-color: #fff;
 }
 
-.ui-item-color-home {
-    background-color: #e67e22 ;
-}
-
-.ui-item-color-resume {
-    background-color: #9b59b6 ;
-}
-
-.ui-item-color-contact {
-    background-color: #3498db ;
-}
-
-.ui-item-color-download {
-    background-color: #525252 ;
-}
-
 .bg-color-personal-info {
     background-color: #f4f4f4;
 }
 
-/* Special padding margins text */
+.bg-color-work-history {
+    background-color: #9b59b6;
+}
+
+.ui-menu-color-home {
+    background-color: #e67e22;
+}
+
+.ui-menu-color-resume {
+    background-color: #9b59b6;
+}
+
+.ui-menu-color-contact {
+    background-color: #3498db;
+}
+
+.ui-menu-color-download {
+    background-color: #525252;
+}
+
+
+/* ----------------------------------------Special paddings/margins/text */
 
 h1,
 h2,
 h3,
 h4 {
-    margin:0;
+    margin: 0;
 }
 
 .uppercase {
@@ -48,7 +53,6 @@ h4 {
     font-family: "Exo", sans-serif;
     font-weight: 300;
     color: #fafafa;
-
 }
 
 .inline-block {
@@ -61,10 +65,11 @@ h4 {
 
 .section-column {
     display: table-cell;
-    padding: 0 30px 30 px;
+    padding: 0 30px 30px;
     float: none;
 }
 
+.history-heading, 
 .section-heading {
     font-family: "Exo", sans-serif;
     font-weight: 300;
@@ -72,7 +77,7 @@ h4 {
     margin-bottom: 40px;
 }
 
-/* Heading */
+/*--------------------------------------------Heading*/
 
 header {
     margin: 0;
@@ -85,11 +90,11 @@ header {
 .logo {
     background: url("../images/rosie.jpg");
     background-position: center;
-    background-position: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
     transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;;
+    -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
 }
 
@@ -98,7 +103,7 @@ header {
     font-weight: 100;
     font-size: 46px;
     margin-top: 50px;
-    color: white;
+    color: #fff;
 }
 
 .title {
@@ -107,7 +112,7 @@ header {
     font-size: 28px;
     margin-top: 20px;
     margin-bottom: 90px;
-    color: white;
+    color: #fff;
 }
 
 .list-inline-item:not(:last-child) {
@@ -118,13 +123,13 @@ header {
     font-size: 0;
 }
 
-#nav {
-    margin: 0;
-}
-
 #nav li {
     font-size: 14px;
     padding: 0;
+}
+
+#nav {
+    margin: 0;
 }
 
 .menuitem {
@@ -155,22 +160,23 @@ header {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 300;
-    letter-spacing: 2px;    
+    letter-spacing: 2px;
 }
 
-/* Hover.css */
+/*--------------------------------------------Hover.css*/
 
 .hvr-sweep-to-bottom:before {
-    background-color: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     height: 120px;
 }
 
-/* Footer */
+/* ----------------------------------------Footer */
 
 footer {
     background-color: #525252;
-    color:#fafafa;
+    color: #fafafa;
     min-height: 120px;
+    margin: 0;
 }
 
 .cv-pdf i {
@@ -209,14 +215,14 @@ footer {
 }
 
 .social-links li a i:hover {
-    background-color: #e84610 ;
+    background: #e84610;
 }
 
 #footer-details {
     padding: 20px;
 }
 
-/* Three reasons */
+/* ----------------------------------------Three Reasons */
 
 .three-reasons-icon {
     font-size: 26px;
@@ -227,7 +233,7 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Personal Info */
+/* ----------------------------------------Personal Info */
 
 .personal-info-item {
     margin-bottom: 20px;
@@ -242,8 +248,8 @@ footer {
 }
 
 .personal-info-item .key p,
-.personal-info-item .value p{
-    margin:0;
+.personal-info-item .value p {
+    margin: 0;
 }
 
 .personal-info-item .key {
@@ -253,11 +259,80 @@ footer {
     vertical-align: top;
 }
 
-.personal-info-item .key p{
+.personal-info-item .key p {
     font-weight: 700;
 }
 
 .personal-info-item .value {
     position: relative;
-    width: 60%
+    width: 60%;
+}
+
+/* ----------------------------------------Skills */
+
+.progress {
+    position: relative;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.progress-type {
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 10px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25, 25, 25, 0.2);
+}
+
+.progress-section {
+    margin: 40px 20px;
+}
+
+/* -------------------------------Work History */
+
+.history-heading {
+    color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.timeline-item {
+    padding: 4em 2em 0em 2em;
+    position: relative;
+    color: #fafafa;
+    border-left: 1px solid;
+}
+
+.timeline-item p {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: "";
+    background: #fafafa ;
+}
+
+.history-items {
+    margin-bottom: 30px;
 }
