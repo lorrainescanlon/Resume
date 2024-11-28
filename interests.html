@@ -197,46 +197,9 @@
         </div>
 
     </footer>
-    <script>
-        async function initMap(){
-            const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-            const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary(
-            "marker",);
-            
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 3,
-                center: {
-                    lat: 46.619261,
-                    lng: -33.134766
-                }
-            });
-            var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            var locations = [
-                {lat: 40.785091, lng: -73.968285},
-                {lat: 41.084045, lng: -73.874245},
-                {lat: 40.754932, lng: -73.984016}
-            ];
 
-            var markers = locations.map((position, i) => {
-                var label = labels[i % labels.length];
-                var pinGlyph = new google.maps.marker.PinElement({
-                    glyph: label,
-                    glyphColor: "white",
-                });
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsc8B1YwaUjH6E7BgAYE-rTsbBnC8lOtY&loading=async&callback=initMap&v=weekly&libraries=marker"defer></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js?key=AIzaSyCsc8B1YwaUjH6E7BgAYE-rTsbBnC8lOtY&loading=async&callback=initMap"defer></script>    
+    <script src="assets/js/maps.js"></script>
 
-                var marker = new google.maps.marker.AdvancedMarkerElement({
-                    position, 
-                    content: pinGlyph.element,
-                });
-
-                return marker;
-            });
-
-            var markerClusterer = new MarkerClusterer({markers, map});
-        }
-    </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsc8B1YwaUjH6E7BgAYE-rTsbBnC8lOtY&callback=initMap"></script>
 </body>
-
-</html>
